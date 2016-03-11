@@ -55,7 +55,7 @@ Attach an event handler function for one or more events to the selected elements
 
 ## off
 ```js
-dom(SELECTOR).on(EVENT, HANDLER);
+dom(SELECTOR).off(EVENT, HANDLER);
 ```
 Remove an event handler.
 * SELECTOR - string
