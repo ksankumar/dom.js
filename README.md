@@ -13,6 +13,7 @@ DOM-JS is a lightweight Javascript library for perform DOM manipulations
 ### Version
 0.0.1
 
+### Installation
 You need Gulp installed globally:
 ```sh
 $ npm i -g gulp
@@ -29,14 +30,44 @@ We can access the DOM.JS's APIs with help of **dom** or **$** namespace
 # DOM.JS APIs
 
 ## ready
+
 ```js
-performance.init(delay); //5000
+dom.ready(function() {
+    console.log('dom is ready');
+});
 ```
+dom.ready() will only run once the page Document Object Model (DOM) is ready for JavaScript code to execute.
 
-And of course Dillinger itself is open source with a [public repository][dill]
- on GitHub.
+## on
+```js
+dom(SELECTOR).on(EVENT, HANDLER);
+```
+Attach an event handler function for one or more events to the selected elements
+* SELECTOR - string
 
-### Installation
+        A selector string to filter the selected elements - SELECTOR should be id(#SELECTOR), class(.SELECTOR) or tag name(div, p, button, etc), should not be a null.
+* EVENT - string
+
+        Type of the event such as click, hover.etc
+* HANDLER - function
+
+        A function to execute when the event is triggered
+
+## off
+```js
+dom(SELECTOR).on(EVENT, HANDLER);
+```
+Remove an event handler.
+* SELECTOR - string
+
+        A selector which should match the one originally passed to .on() when attaching event handlers.
+* EVENT - string
+
+        Type of the event such as click, hover.etc
+* HANDLER - function
+
+       A handler function previously attached for the event(s) with .on()
+
 
 ## Reference
 
