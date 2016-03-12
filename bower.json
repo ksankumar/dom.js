@@ -1,0 +1,9 @@
+{
+    "name": "dom.js",
+    "version": "v1.0.1",
+    "description": "javascript library for DOM manipulation",
+    "main": "lib/dom.js",
+    "ignore": [
+        "**/.*"
+    ]
+}

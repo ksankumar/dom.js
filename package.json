@@ -1,0 +1,28 @@
+{
+    "name": "dom.js",
+    "version": "v1.0.1",
+    "homepage": "https://github.com/ksankumar/dom.js",
+    "description": "javascript library for DOM manipulation",
+    "main": "lib/dom.js",
+    "author": {
+        "name": "Santhosh Kumar Krishnan",
+        "email": "ksankumar@gmail.com",
+        "url": "www.linkedin.com/in/ksankumar"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ksankumar/dom.js.git"
+    },
+    "bugs": {
+        "url": "https://github.com/ksankumar/dom.js/issues"
+    },
+    "keywords": [
+        "library",
+        "framework",
+        "utility",
+        "common",
+        "performance",
+        "chrome"
+    ],
+    "license": "MIT"
+}
