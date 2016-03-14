@@ -68,6 +68,87 @@ Remove an event handler.
 
        A handler function previously attached for the event(s) with .on()
 
+## each
+```js
+dom.each(OBJECT, function(INDEX, ELEMENT){});
+```
+Iterate over a object, executing a function for each matched element.
+
+* INDEX - integer
+* ELEMENT - Object
+
+### Example
+```js
+dom('li).each(function(index, element){
+    console.log( index + ' : ' + dom(element).text());
+});
+```
+
+## html
+Read or write the HTML content of an element.
+
+```html
+<h1 id="h1-title">Hi foo</h1>
+```
+
+* Get the html
+```js
+var html = dom('#h1-title').html();
+console.log(html);
+```
+
+* Set the html
+```js
+dom('#h1-title').html('Hello foo!');
+```
+The result look like this
+```html
+<h1 id="h1-title">Hello foo!</h1>
+```
+
+## text
+Get the combined text contents of an element, including its descendants, or set the text content of the element.
+```html
+<h1 id="h1-title">Hi foo</h1>
+```
+
+* Get the text
+```js
+var html = dom('#h1-title').text();
+console.log(html);
+```
+* Set the html
+
+```js
+dom('#h1-title').text('Hello foo!');
+```
+The result look like this
+```html
+<h1 id="h1-title">Hello foo!</h1>
+```
+## attr
+Modify attributes, such as id, class, alt, title and more.
+```html
+<a href="#" title="click here">Hello foo!</a>
+```
+* Get the attribute
+```js
+var attr = dom('a').attr('title');
+console.log(attr);
+```
+
+* Set the attribute
+dom('a').attr('title', 'click me');
+The result look like this
+```html
+<a href="#" title="click me">Hello foo!</a>
+```
+
+
+
+
+
+
 
 ## Reference
 
