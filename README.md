@@ -346,13 +346,86 @@ The second time we applydom('#container span').toggleClass('sub-content'), the r
 </div>
 ```
 
+## parent
+Getting the parent DOM node of an element.
 
+```js
+dom('.sub-content').parent();
+```
+```html
+<div id="container">
+    <span  class="sub-content">content 1</span>
+</div>
+```
 
+## parents
+Getting all parents DOM node of an element.
 
+```js
+dom('.sub-content').parents();
+```
+```html
+<div id="container">
+    <span  class="sub-content">content 1</span>
+</div>
+```
+## next
+Get the next of an element or retrieve siblings.
+```js
+dom('#container').next();
+```
+```html
+<div id="container">
+    <span  class="sub-content">content 1</span>
+</div>
+```
 
+## nextAll
+Get all preceding siblings of an element, optionally filtered:
+```js
+dom('#container').nextAll('.sub-content');
+```
+```html
+<div id="container">
+    <span  class="sub-content">content 1</span>
+</div>
+```
 
+## prev
+Get the previous of an element or retrieve siblings.
+```js
+dom('.inner-content').prev();
+```
+```html
+<div id="container">
+    <span  class="sub-content">sub content</span>
+    <span  class="inner-content">inner content</span>
+</div>
+```
 
+## prev
+Get all previous siblings of an element, optionally filtered
+```js
+dom('.inner-content').prevAll();
+```
+```html
+<div id="container">
+    <span  class="sub-content">sub content</span>
+    <span  class="inner-content">inner content</span>
+</div>
+```
 
+## siblings
+Get the all siblings of an element or retrieve siblings that match a given selector.
+```js
+dom('#container').siblings();
+```
+```html
+<div id="container">
+    <span  class="sub-content">sub content</span>
+    <span  class="inner-content">inner content</span>
+</div>
+```
 
 
 ## Reference
