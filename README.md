@@ -342,7 +342,7 @@ The result look like this
 The second time we applydom('#container span').toggleClass('sub-content'), the result look like this
 ```html
 <div id="container">
-    <span  class="sub-content">content 1</span>
+    <span class="sub-content">content 1</span>
 </div>
 ```
 
@@ -354,7 +354,7 @@ dom('.sub-content').parent();
 ```
 ```html
 <div id="container">
-    <span  class="sub-content">content 1</span>
+    <span class="sub-content">content 1</span>
 </div>
 ```
 
@@ -366,7 +366,7 @@ dom('.sub-content').parents();
 ```
 ```html
 <div id="container">
-    <span  class="sub-content">content 1</span>
+    <span class="sub-content">content 1</span>
 </div>
 ```
 ## next
@@ -376,7 +376,7 @@ dom('#container').next();
 ```
 ```html
 <div id="container">
-    <span  class="sub-content">content 1</span>
+    <span class="sub-content">content 1</span>
 </div>
 ```
 
@@ -387,7 +387,7 @@ dom('#container').nextAll('.sub-content');
 ```
 ```html
 <div id="container">
-    <span  class="sub-content">content 1</span>
+    <span class="sub-content">content 1</span>
 </div>
 ```
 
@@ -398,34 +398,322 @@ dom('.inner-content').prev();
 ```
 ```html
 <div id="container">
-    <span  class="sub-content">sub content</span>
-    <span  class="inner-content">inner content</span>
+    <span class="sub-content">sub content</span>
+    <span class="inner-content">inner content</span>
 </div>
 ```
 
-## prev
+## prevAll
 Get all previous siblings of an element, optionally filtered
 ```js
 dom('.inner-content').prevAll();
 ```
 ```html
 <div id="container">
-    <span  class="sub-content">sub content</span>
-    <span  class="inner-content">inner content</span>
+    <span class="sub-content">sub content</span>
+    <span class="inner-content">inner content</span>
 </div>
 ```
 
 ## siblings
 Get the all siblings of an element or retrieve siblings that match a given selector.
 ```js
-dom('#container').siblings();
+dom('.li-content').siblings();
 ```
 ```html
+<ul id="container">
+    <li class="list">List 1</span>
+    <li class="list">List 2</span>
+    <li class="list li-content">List 3</span>
+    <li class="list">List 4</span>
+</ul>
+```
+
+## children
+Getting the children of a DOM element
+```js
+dom('#container').children();
+```
+```html
+<ul id="container">
+    <li class="list">List 1</span>
+    <li class="list">List 2</span>
+    <li class="list li-content">List 3</span>
+    <li class="list">List 4</span>
+</ul>
+```
+
+## closest
+Get the first element that matches the selector by testing the element itself and traversing up through its ancestors in the DOM tree
+```js
+dom('#container').closest(.li-content);
+```
+```html
+<ul id="container">
+    <li class="list">List 1</span>
+    <li class="list">List 2</span>
+    <li class="list li-content">List 3</span>
+    <li class="list">List 4</span>
+</ul>
+```
+
+## focus
+Bind an event handler to the 'focus' JavaScript event, or trigger that event on an element.
+```js
+dom('#input').focus();
+```
+or
+```js
+dom('#input').focus(function(){
+    console.log('focus');
+});
+```
+
+```html
 <div id="container">
-    <span  class="sub-content">sub content</span>
-    <span  class="inner-content">inner content</span>
+    <input id="input" placeholder="text here">
 </div>
 ```
+
+## focusIn
+The focusin event is sent to an element when it, or any element inside of it, gains focus.
+```js
+dom('#input').focusIn();
+```
+or
+```js
+dom('#input').focusIn(function(){
+    console.log('focusIn');
+});
+```
+
+```html
+<div id="container">
+    <input id="input" placeholder="text here">
+</div>
+```
+## focusOut
+Bind an event handler to the 'focus' JavaScript event, or trigger that event on an element.
+```js
+dom('#input').focusOut();
+```
+```js
+dom('#input').focusOut(function(){
+    console.log('focus Out');
+});
+```
+
+```html
+<div id="container">
+    <input id="input" placeholder="text here">
+</div>
+```
+## first
+Reduce the set of matched elements to the first in the set.
+```js
+dom('#container li').first();
+```
+```html
+<ul id="container">
+    <li class="list">List 1</span>
+    <li class="list">List 2</span>
+    <li class="list">List 3</span>
+    <li class="list">List 4</span>
+</ul>
+```
+The result look like this
+```html
+ <li class="list">List 1</span>
+```
+
+## last
+Reduce the set of matched elements to the last in the set.
+```js
+dom('#container li').last();
+```
+```html
+<ul id="container">
+    <li class="list">List 1</span>
+    <li class="list">List 2</span>
+    <li class="list">List 3</span>
+    <li class="list">List 4</span>
+</ul>
+```
+The result look like this
+```html
+ <li class="list">List 4</span>
+```
+
+## eq
+Reduce the set of matched elements to the one at the specified index.
+```js
+dom('#container li').eq(2);
+```
+```html
+<ul id="container">
+    <li class="list">List 1</span>
+    <li class="list">List 2</span>
+    <li class="list">List 3</span>
+    <li class="list">List 4</span>
+</ul>
+```
+The result look like this
+```html
+ <li class="list">List 3</span>
+```
+
+## get
+Retrieve the DOM elements matched by the jQuery object.
+```js
+dom('#container li').get(); 
+```
+The result look like this
+```html
+  <li class="list">List 1</span>
+  <li class="list">List 2</span>
+  <li class="list">List 3</span>
+  <li class="list">List 4</span>
+```
+or
+```js
+dom('#container li').get(2); 
+```
+```html
+<ul id="container">
+    <li class="list">List 1</span>
+    <li class="list">List 2</span>
+    <li class="list">List 3</span>
+    <li class="list">List 4</span>
+</ul>
+```
+The result look like this
+```html
+ <li class="list">List 3</span>
+```
+
+## css
+Get the computed style properties or set CSS properties for an element.
+* Set css
+```js
+dom('#container li').css('color','red'); 
+```
+or
+```js
+dom('#container li').css({'color':'red', 'background':'red'}); 
+```
+```html
+<ul id="container">
+    <li class="list" style="color:green">List 1</span>
+    <li class="list">List 2</span>
+    <li class="list">List 3</span>
+    <li class="list">List 4</span>
+</ul>
+```
+The result look like this
+```html
+<ul id="container">
+    <li class="list" style="color:red; background:red">List 1</span>
+    <li class="list" style="color:red; background:red">List 2</span>
+    <li class="list" style="color:red; background:red">List 3</span>
+    <li class="list" style="color:red; background:red">List 4</span>
+</ul>
+```
+* Get css 
+```js
+console.log(dom('#container li').css('color')); 
+```
+
+## hide
+Hide the matched elements.
+```js
+dom('#container li').hide(); 
+```
+```html
+<ul id="container">
+    <li class="list" style="color:green">List 1</span>
+    <li class="list">List 2</span>
+    <li class="list">List 3</span>
+    <li class="list">List 4</span>
+</ul>
+```
+The result look like this
+```html
+<ul id="container">
+    <li class="list" style="display:none;">List 1</span>
+    <li class="list" style="display:none;">List 2</span>
+    <li class="list" style="display:none;">List 3</span>
+    <li class="list" style="display:none;">List 4</span>
+</ul>
+```
+
+## show
+Show the matched elements.
+```js
+dom('#container li').show(); 
+```
+```html
+<ul id="container">
+    <li class="list" style="display:none;">List 1</span>
+    <li class="list" style="display:none;">List 2</span>
+    <li class="list" style="display:none;">List 3</span>
+    <li class="list" style="display:none;">List 4</span>
+</ul>
+```
+The result look like this
+```html
+<ul id="container">
+    <li class="list">List 1</span>
+    <li class="list">List 2</span>
+    <li class="list">List 3</span>
+    <li class="list">List 4</span>
+</ul>
+```
+## toggle
+Toggle an element's display property for rendering it visible or invisible.
+```js
+dom('#container li').toggle(); 
+```
+```html
+<ul id="container">
+    <li class="list" style="display:none;">List 1</span>
+    <li class="list">List 2</span>
+    <li class="list" style="display:none;">List 3</span>
+    <li class="list">List 4</span>
+</ul>
+```
+The result look like this
+```html
+<ul id="container">
+    <li class="list">List 1</span>
+    <li class="list" style="display:none;">List 2</span>
+    <li class="list">List 3</span>
+    <li class="list" style="display:none;">List 4</span>
+</ul>
+```
+
+## fadeOut
+
+## fadeIn
+
+## trim
+
+## parseJSON
+
+## stringify
+
+## log
+
+## extend
+
+## isFunction
+
+## when
+
+## type
+
+## isArray
+
+## merge
 
 
 ## Reference
