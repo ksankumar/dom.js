@@ -79,7 +79,7 @@ Iterate over a object, executing a function for each matched element.
 
 ### Example
 ```js
-dom('li).each(function(index, element){
+dom('li').each(function(index, element){
     console.log( index + ' : ' + dom(element).text());
 });
 ```
@@ -143,6 +143,211 @@ The result look like this
 ```html
 <a href="#" title="click me">Hello foo!</a>
 ```
+## data
+Store arbitrary data associated with the matched elements or return the value at the named data store for the first element in the set of matched elements.
+```html
+<a href="#" title="click here" data-link="next page link">Hello foo!</a>
+```
+* Set data
+```js
+dom('a').data('msg', 'link message');
+```
+The result look like this
+```html
+<a href="#" title="click here" data-link="next page link" data-msg="link message">Hello foo!</a>
+```
+* Get the data
+```js
+var data = dom('a').data('msg');
+console.log(data);
+```
+```js
+var data = dom('a').data();
+console.log(data);
+```
+## removeAttr
+This method to erase an attribute from the element
+
+```html
+<a href="#" title="click here" data-link="next page link">Hello foo!</a>
+```
+```js
+dom('a').removeAttr('title');
+```
+The result look like this
+```html
+<a href="#" data-link="next page link">Hello foo!</a>
+```
+## append
+Insert a new element or an HTML structure to the end of another element's content.
+```js
+dom('#container').append('<h1>Appended</h1>');
+```
+```html
+<div id="container">
+    <span>content 1</span>
+</div>
+```
+The result look like this
+```html
+<div id="container">
+    <span>content 1</span>
+    <h1>Appended</h1>
+</div>
+```
+
+## prepend
+Insert a new element or an HTML structure to the beginning of another element's content.
+```js
+dom('#container').prepend('<h1>Appended</h1>');
+```
+```html
+<div id="container">
+    <span>content 1</span>
+</div>
+```
+The result look like this
+```html
+<div id="container">
+    <h1>Appended</h1>
+    <span>content 1</span>
+</div>
+```
+
+## before
+Insert an HTML structure before a given DOM tree element.
+```js
+dom('.sub-content').before('<h1>Appended</h1>');
+```
+```html
+<div id="container">
+    <span class="sub-content">content 1</span>
+</div>
+```
+The result look like this
+```html
+<div id="container">
+    <h1>Appended</h1>
+    <span class="sub-content">content 1</span>
+</div>
+```
+
+## after
+Insert an HTML structure after a given DOM tree element.
+```js
+dom('.sub-content').after('<h1>Appended</h1>');
+```
+```html
+<div id="container">
+    <span class="sub-content">content 1</span>
+</div>
+```
+The result look like this
+```html
+<div id="container">
+    <span class="sub-content">content 1</span>
+    <h1>Appended</h1>
+</div>
+```
+## empty
+Remove all child nodes of an element from the DOM
+```js
+dom('.sub-content').empty();
+```
+```html
+<div id="container">
+    <span class="sub-content">content 1</span>
+</div>
+```
+The result look like this
+```html
+<div id="container">
+    <span class="sub-content"></span>
+</div>
+```
+## remove
+Remove an element from the DOM tree.
+```js
+dom('.sub-content').remove();
+```
+```html
+<div id="container">
+    <span class="sub-content">content 1</span>
+</div>
+```
+The result look like this
+```html
+<div id="container"></div>
+```
+
+## hasClass
+Determine whether any of the matched elements are assigned the given class
+```js
+alert(dom('#container span').hasClass('sub-content'));
+```
+
+## addClass
+Adds the specified class(es) to each element in the set of matched elements
+
+```html
+<div id="container">
+    <span class="sub-content">content 1</span>
+</div>
+```
+
+```js
+dom('#container span').addClass('sub-class');
+```
+The result look like this
+```html
+<div id="container">
+    <span class="sub-content sub-class">content 1</span>
+</div>
+```
+
+## removeClass
+Remove a single class, multiple classes, or all classes from each element in the set of matched elements.
+```html
+<div id="container">
+    <span class="sub-content">content 1</span>
+</div>
+```
+
+```js
+dom('#container span').removeClass('sub-content');
+```
+The result look like this
+```html
+<div id="container">
+    <span>content 1</span>
+</div>
+```
+## toggleClass
+Add or remove one or more classes from each element in the set of matched elements, depending on either the class's presence or the value of the state argument
+```html
+<div id="container">
+    <span class="sub-content">content 1</span>
+</div>
+```
+
+```js
+dom('#container span').toggleClass('sub-content');
+```
+The result look like this
+```html
+<div id="container">
+    <span>content 1</span>
+</div>
+```
+The second time we applydom('#container span').toggleClass('sub-content'), the result look like this
+```html
+<div id="container">
+    <span  class="sub-content">content 1</span>
+</div>
+```
+
+
+
 
 
 
