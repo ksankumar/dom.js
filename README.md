@@ -691,30 +691,131 @@ The result look like this
 </ul>
 ```
 
-## fadeOut
-
 ## fadeIn
+Display the matched elements by fading them to opaque
+```js
+dom('#container').fadeIn(500); 
+```
+```html
+<ul id="container">
+    <li class="list" style="display:none;">List 1</span>
+    <li class="list">List 2</span>
+    <li class="list" style="display:none;">List 3</span>
+    <li class="list">List 4</span>
+</ul>
+```
+The result look like this
+```html
+<ul id="container">
+    <li class="list">List 1</span>
+    <li class="list" style="display:none;">List 2</span>
+    <li class="list">List 3</span>
+    <li class="list" style="display:none;">List 4</span>
+</ul>
+```
+
+## fadeOut
+Hide the matched elements by fading them to opaque
+```js
+dom('#container').fadeOut(500); 
+```
+```html
+<ul id="container">
+    <li class="list" style="display:none;">List 1</span>
+    <li class="list">List 2</span>
+    <li class="list" style="display:none;">List 3</span>
+    <li class="list">List 4</span>
+</ul>
+```
+The result look like this
+```html
+<ul id="container"></ul>
+```
 
 ## trim
-
+Remove white-space characters from the beginning and end of a string.
+```js
+console.log(dom.trim('  foo '));
+```
+The result look like this
+```html
+foo
+```
 ## parseJSON
+Takes a well-formed JSON string and returns the resulting JavaScript value.
+```js
+dom.parseJSON("{'key':'value'}");
+```
+The result look like this
+```json
+{'key':'value'}
+```
 
 ## stringify
+Convert JSON object to String
+```js
+dom.stringify({'key':'value'});
+```
+The result look like this
+```json
+"{'key':'value'}"
+```
 
 ## log
+display the log for particular element
+```js
+dom('#container').log('ul :');
+```
 
 ## extend
+Extend or Merge a JavaScript object with the key/value pairs of another.
+```js
+dom.extend({'key':'value1'}, {'key':'value2'});
+```
+The result look like this
+```log
+Object {key1: "value1", key2: "value2"}
+```
 
 ## isFunction
-
-## when
+Determine whether its function or not
+```js
+dom.isFunction(function());
+```
+The result look like this
+```log
+true
+```
 
 ## type
+Determine what type of value
+```js
+dom.type(true);
+```
+The result look like this
+```log
+boolean
+```
 
 ## isArray
+Check whether it's array or not
+```js
+dom.isArray([1,2,3]);
+```
+The result look like this
+```log
+true
+```
 
 ## merge
-
+Merge two Array
+```js
+dom.merge([1,2,3],[2,4,5]);
+```
+The result look like this
+```log
+[1, 2, 3, 2, 4, 5]
+```
 
 ## Reference
 
