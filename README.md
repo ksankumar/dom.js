@@ -24,6 +24,7 @@ $ git clone https://github.com/ksankumar/dom.js
 ```html
 <script type="text/javascript" src="lib/dom.min.js"></script>
 ```
+
 # Tech
 We can access the DOM.JS's APIs with help of **dom** or **$** namespace
 
