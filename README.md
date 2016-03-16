@@ -744,21 +744,21 @@ foo
 ## parseJSON
 Takes a well-formed JSON string and returns the resulting JavaScript value.
 ```js
-dom.parseJSON("{'key':'value'}");
+dom.parseJSON('{"result":true,"count":1}');
 ```
 The result look like this
 ```json
-{'key':'value'}
+Object {result: true, count: 1}
 ```
 
 ## stringify
 Convert JSON object to String
 ```js
-dom.stringify({'key':'value'});
+dom.stringify({result: true, count: 1});
 ```
 The result look like this
 ```json
-"{'key':'value'}"
+'{"result":true,"count":1}'
 ```
 
 ## log
