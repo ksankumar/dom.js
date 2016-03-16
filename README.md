@@ -52,6 +52,11 @@ Attach an event handler function for one or more events to the selected elements
 * HANDLER - function
 
         A function to execute when the event is triggered
+```js
+dom('button').on('click', function(){
+    alert('clicked');
+});
+```
 
 ## off
 ```js
@@ -67,6 +72,24 @@ Remove an event handler.
 * HANDLER - function
 
        A handler function previously attached for the event(s) with .on()
+```js
+dom('button').off('click');
+```
+
+## fire
+```js
+dom(SELECTOR).fire(EVENT);
+```
+Trigger an event handler.
+* SELECTOR - string
+
+        A selector which should match the one originally passed to .on() when attaching event handlers.
+* EVENT - string
+
+        Type of the event such as click, hover.etc
+```js
+dom('button').fire('click');
+```
 
 ## each
 ```js
@@ -126,6 +149,7 @@ The result look like this
 ```html
 <h1 id="h1-title">Hello foo!</h1>
 ```
+
 ## attr
 Modify attributes, such as id, class, alt, title and more.
 ```html
@@ -143,6 +167,7 @@ The result look like this
 ```html
 <a href="#" title="click me">Hello foo!</a>
 ```
+
 ## data
 Store arbitrary data associated with the matched elements or return the value at the named data store for the first element in the set of matched elements.
 ```html
@@ -154,17 +179,23 @@ dom('a').data('msg', 'link message');
 ```
 The result look like this
 ```html
-<a href="#" title="click here" data-link="next page link" data-msg="link message">Hello foo!</a>
+<a href="#" title="click here" data-link="next page link" data-msg="data message">Hello foo!</a>
 ```
 * Get the data
 ```js
-var data = dom('a').data('msg');
-console.log(data);
+console.log(dom('a').data('msg'));
+
+The result look like this
+data message
 ```
+
 ```js
-var data = dom('a').data();
-console.log(data);
+console.log(dom('a').data());
+
+The result look like this
+Object {link: "next page link", msg: "data message"}
 ```
+
 ## removeAttr
 This method to erase an attribute from the element
 
@@ -178,6 +209,7 @@ The result look like this
 ```html
 <a href="#" data-link="next page link">Hello foo!</a>
 ```
+
 ## append
 Insert a new element or an HTML structure to the end of another element's content.
 ```js
@@ -249,6 +281,7 @@ The result look like this
     <h1>Appended</h1>
 </div>
 ```
+
 ## empty
 Remove all child nodes of an element from the DOM
 ```js
@@ -265,6 +298,7 @@ The result look like this
     <span class="sub-content"></span>
 </div>
 ```
+
 ## remove
 Remove an element from the DOM tree.
 ```js
@@ -322,6 +356,7 @@ The result look like this
     <span>content 1</span>
 </div>
 ```
+
 ## toggleClass
 Add or remove one or more classes from each element in the set of matched elements, depending on either the class's presence or the value of the state argument
 ```html
@@ -369,6 +404,7 @@ dom('.sub-content').parents();
     <span class="sub-content">content 1</span>
 </div>
 ```
+
 ## next
 Get the next of an element or retrieve siblings.
 ```js
@@ -492,6 +528,7 @@ dom('#input').focusIn(function(){
     <input id="input" placeholder="text here">
 </div>
 ```
+
 ## focusOut
 Bind an event handler to the 'focus' JavaScript event, or trigger that event on an element.
 ```js
@@ -508,6 +545,7 @@ dom('#input').focusOut(function(){
     <input id="input" placeholder="text here">
 </div>
 ```
+
 ## first
 Reduce the set of matched elements to the first in the set.
 ```js
@@ -668,6 +706,7 @@ The result look like this
     <li class="list">List 4</span>
 </ul>
 ```
+
 ## toggle
 Toggle an element's display property for rendering it visible or invisible.
 ```js
@@ -741,6 +780,7 @@ The result look like this
 ```html
 foo
 ```
+
 ## parseJSON
 Takes a well-formed JSON string and returns the resulting JavaScript value.
 ```js
