@@ -861,7 +861,7 @@ The result look like this
 ## clean
 The function takes a single element reference as its argument, and removes all those unwanted nodes from inside it.
 ```js
-dom.clean('#container);
+dom.clean('#container');
 ```
 
 ```html
