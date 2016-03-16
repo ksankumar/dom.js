@@ -593,11 +593,11 @@ The result look like this
 
 ## css
 Get the computed style properties or set CSS properties for an element.
-* Set css
+* Set style
 ```js
 dom('#container li').css('color','red'); 
 ```
-or
+* Set styles
 ```js
 dom('#container li').css({'color':'red', 'background':'red'}); 
 ```
@@ -618,7 +618,7 @@ The result look like this
     <li class="list" style="color:red; background:red">List 4</span>
 </ul>
 ```
-* Get css 
+* Get styles 
 ```js
 console.log(dom('#container li').css('color')); 
 ```
@@ -774,7 +774,7 @@ dom.extend({'key':'value1'}, {'key':'value2'});
 ```
 The result look like this
 ```log
-Object {key1: "value1", key2: "value2"}
+Object {key2: "value2"}
 ```
 
 ## isFunction
