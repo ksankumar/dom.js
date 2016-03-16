@@ -747,7 +747,7 @@ Takes a well-formed JSON string and returns the resulting JavaScript value.
 dom.parseJSON('{"result":true,"count":1}');
 ```
 The result look like this
-```json
+```html
 Object {result: true, count: 1}
 ```
 
