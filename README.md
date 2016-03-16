@@ -857,6 +857,57 @@ The result look like this
 [1, 2, 3, 2, 4, 5]
 ```
 
+## clean
+The function takes a single element reference as its argument, and removes all those unwanted nodes from inside it.
+```js
+dom.clean('#container);
+```
+
+```html
+<div id="container">
+    <ul id="ul-list">
+        <li class="list">List 1</span>
+        <li class="list">List 2</span>
+        <li class="list">List 3</span>
+        <li class="list">List 4</span>
+    </ul>
+</div>
+```
+DOM structure.
+```log
+DIV id="container"
+#text:
++ UL id="ul-list"
+| + #text:
+| + LI class="list"
+| | + #text: List 1
+| + #text:
+| + LI class="list"
+| | + #text: List 2
+| + #text:
+| + LI class="list"
+| | + #text: List 3
+| + #text:
+| + LI class="list"
+| | + #text: List 4
+| + #text:
++ #text:
+```
+
+The result look like this
+```log
+DIV id="container"
++ UL id="ul-list"
+| + LI class="list"
+| | + #text: List 1
+| + LI class="list"
+| | + #text: List 2
+| + LI class="list"
+| | + #text: List 3
+| + LI class="list"
+| | + #text: List 4
+```
+
 ## Reference
 
 [jQuery source viewer](http://james.padolsey.com/jquery/)
