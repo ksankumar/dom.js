@@ -459,10 +459,10 @@ dom('.li-content').siblings();
 ```
 ```html
 <ul id="container">
-    <li class="list">List 1</span>
-    <li class="list">List 2</span>
-    <li class="list li-content">List 3</span>
-    <li class="list">List 4</span>
+    <li class="list">List 1</li>
+    <li class="list">List 2</li>
+    <li class="list li-content">List 3</li>
+    <li class="list">List 4</li>
 </ul>
 ```
 
@@ -473,10 +473,10 @@ dom('#container').children();
 ```
 ```html
 <ul id="container">
-    <li class="list">List 1</span>
-    <li class="list">List 2</span>
-    <li class="list li-content">List 3</span>
-    <li class="list">List 4</span>
+    <li class="list">List 1</li>
+    <li class="list">List 2</li>
+    <li class="list li-content">List 3</li>
+    <li class="list">List 4</li>
 </ul>
 ```
 
@@ -487,10 +487,10 @@ dom('#container').closest(.li-content);
 ```
 ```html
 <ul id="container">
-    <li class="list">List 1</span>
-    <li class="list">List 2</span>
-    <li class="list li-content">List 3</span>
-    <li class="list">List 4</span>
+    <li class="list">List 1</li>
+    <li class="list">List 2</li>
+    <li class="list li-content">List 3</li>
+    <li class="list">List 4</li>
 </ul>
 ```
 
@@ -554,15 +554,15 @@ dom('#container li').first();
 ```
 ```html
 <ul id="container">
-    <li class="list">List 1</span>
-    <li class="list">List 2</span>
-    <li class="list">List 3</span>
-    <li class="list">List 4</span>
+    <li class="list">List 1</li>
+    <li class="list">List 2</li>
+    <li class="list">List 3</li>
+    <li class="list">List 4</li>
 </ul>
 ```
 The result look like this
 ```html
- <li class="list">List 1</span>
+ <li class="list">List 1</li>
 ```
 
 ## last
@@ -572,15 +572,15 @@ dom('#container li').last();
 ```
 ```html
 <ul id="container">
-    <li class="list">List 1</span>
-    <li class="list">List 2</span>
-    <li class="list">List 3</span>
-    <li class="list">List 4</span>
+    <li class="list">List 1</li>
+    <li class="list">List 2</li>
+    <li class="list">List 3</li>
+    <li class="list">List 4</li>
 </ul>
 ```
 The result look like this
 ```html
- <li class="list">List 4</span>
+ <li class="list">List 4</li>
 ```
 
 ## eq
@@ -590,10 +590,10 @@ dom('#container li').eq(2);
 ```
 ```html
 <ul id="container">
-    <li class="list">List 1</span>
-    <li class="list">List 2</span>
-    <li class="list">List 3</span>
-    <li class="list">List 4</span>
+    <li class="list">List 1</li>
+    <li class="list">List 2</li>
+    <li class="list">List 3</li>
+    <li class="list">List 4</li>
 </ul>
 ```
 The result look like this
@@ -608,10 +608,10 @@ dom('#container li').get();
 ```
 The result look like this
 ```html
-  <li class="list">List 1</span>
-  <li class="list">List 2</span>
-  <li class="list">List 3</span>
-  <li class="list">List 4</span>
+  <li class="list">List 1</li>
+  <li class="list">List 2</li>
+  <li class="list">List 3</li>
+  <li class="list">List 4</li>
 ```
 or
 ```js
@@ -619,15 +619,15 @@ dom('#container li').get(2);
 ```
 ```html
 <ul id="container">
-    <li class="list">List 1</span>
-    <li class="list">List 2</span>
-    <li class="list">List 3</span>
-    <li class="list">List 4</span>
+    <li class="list">List 1</li>
+    <li class="list">List 2</li>
+    <li class="list">List 3</li>
+    <li class="list">List 4</li>
 </ul>
 ```
 The result look like this
 ```html
- <li class="list">List 3</span>
+ <li class="list">List 3</li>
 ```
 
 ## css
@@ -642,24 +642,29 @@ dom('#container li').css({'color':'red', 'background':'red'});
 ```
 ```html
 <ul id="container">
-    <li class="list" style="color:green">List 1</span>
-    <li class="list">List 2</span>
-    <li class="list">List 3</span>
-    <li class="list">List 4</span>
+    <li class="list" style="color:green">List 1</li>
+    <li class="list">List 2</li>
+    <li class="list">List 3</li>
+    <li class="list">List 4</li>
 </ul>
 ```
 The result look like this
 ```html
 <ul id="container">
-    <li class="list" style="color:red; background:red">List 1</span>
-    <li class="list" style="color:red; background:red">List 2</span>
-    <li class="list" style="color:red; background:red">List 3</span>
-    <li class="list" style="color:red; background:red">List 4</span>
+    <li class="list" style="color:red; background:red">List 1</li>
+    <li class="list" style="color:red; background:red">List 2</li>
+    <li class="list" style="color:red; background:red">List 3</li>
+    <li class="list" style="color:red; background:red">List 4</li>
 </ul>
 ```
 * Get styles 
 ```js
 console.log(dom('#container li').css('color')); 
+```
+
+The result look like this
+```log
+red
 ```
 
 ## hide
@@ -669,19 +674,19 @@ dom('#container li').hide();
 ```
 ```html
 <ul id="container">
-    <li class="list" style="color:green">List 1</span>
-    <li class="list">List 2</span>
-    <li class="list">List 3</span>
-    <li class="list">List 4</span>
+    <li class="list" style="color:green">List 1</li>
+    <li class="list">List 2</li>
+    <li class="list">List 3</li>
+    <li class="list">List 4</li>
 </ul>
 ```
 The result look like this
 ```html
 <ul id="container">
-    <li class="list" style="display:none;">List 1</span>
-    <li class="list" style="display:none;">List 2</span>
-    <li class="list" style="display:none;">List 3</span>
-    <li class="list" style="display:none;">List 4</span>
+    <li class="list" style="display:none;">List 1</li>
+    <li class="list" style="display:none;">List 2</li>
+    <li class="list" style="display:none;">List 3</li>
+    <li class="list" style="display:none;">List 4</li>
 </ul>
 ```
 
@@ -692,19 +697,19 @@ dom('#container li').show();
 ```
 ```html
 <ul id="container">
-    <li class="list" style="display:none;">List 1</span>
-    <li class="list" style="display:none;">List 2</span>
-    <li class="list" style="display:none;">List 3</span>
-    <li class="list" style="display:none;">List 4</span>
+    <li class="list" style="display:none;">List 1</li>
+    <li class="list" style="display:none;">List 2</li>
+    <li class="list" style="display:none;">List 3</li>
+    <li class="list" style="display:none;">List 4</li>
 </ul>
 ```
 The result look like this
 ```html
 <ul id="container">
-    <li class="list">List 1</span>
-    <li class="list">List 2</span>
-    <li class="list">List 3</span>
-    <li class="list">List 4</span>
+    <li class="list" style="display:block;">List 1</li>
+    <li class="list" style="display:block;">List 2</li>
+    <li class="list" style="display:block;">List 3</li>
+    <li class="list" style="display:block;">List 4</li>
 </ul>
 ```
 
@@ -715,19 +720,19 @@ dom('#container li').toggle();
 ```
 ```html
 <ul id="container">
-    <li class="list" style="display:none;">List 1</span>
-    <li class="list">List 2</span>
-    <li class="list" style="display:none;">List 3</span>
-    <li class="list">List 4</span>
+    <li class="list" style="display:none;">List 1</li>
+    <li class="list">List 2</li>
+    <li class="list" style="display:none;">List 3</li>
+    <li class="list">List 4</li>
 </ul>
 ```
 The result look like this
 ```html
 <ul id="container">
-    <li class="list">List 1</span>
-    <li class="list" style="display:none;">List 2</span>
-    <li class="list">List 3</span>
-    <li class="list" style="display:none;">List 4</span>
+    <li class="list">List 1</li>
+    <li class="list" style="display:none;">List 2</li>
+    <li class="list">List 3</li>
+    <li class="list" style="display:none;">List 4</li>
 </ul>
 ```
 
@@ -738,19 +743,10 @@ dom('#container').fadeIn(500);
 ```
 ```html
 <ul id="container">
-    <li class="list" style="display:none;">List 1</span>
-    <li class="list">List 2</span>
-    <li class="list" style="display:none;">List 3</span>
-    <li class="list">List 4</span>
-</ul>
-```
-The result look like this
-```html
-<ul id="container">
-    <li class="list">List 1</span>
-    <li class="list" style="display:none;">List 2</span>
-    <li class="list">List 3</span>
-    <li class="list" style="display:none;">List 4</span>
+    <li class="list" style="display:none;">List 1</li>
+    <li class="list">List 2</li>
+    <li class="list" style="display:none;">List 3</lili>
+    <li class="list">List 4</li>
 </ul>
 ```
 
@@ -761,15 +757,11 @@ dom('#container').fadeOut(500);
 ```
 ```html
 <ul id="container">
-    <li class="list" style="display:none;">List 1</span>
-    <li class="list">List 2</span>
-    <li class="list" style="display:none;">List 3</span>
-    <li class="list">List 4</span>
+    <li class="list" style="display:none;">List 1</li>
+    <li class="list">List 2</li>
+    <li class="list" style="display:none;">List 3</li>
+    <li class="list">List 4</li>
 </ul>
-```
-The result look like this
-```html
-<ul id="container"></ul>
 ```
 
 ## trim
@@ -867,10 +859,10 @@ dom.clean('#container');
 ```html
 <div id="container">
     <ul id="ul-list">
-        <li class="list">List 1</span>
-        <li class="list">List 2</span>
-        <li class="list">List 3</span>
-        <li class="list">List 4</span>
+        <li class="list">List 1</li>
+        <li class="list">List 2</li>
+        <li class="list">List 3</li>
+        <li class="list">List 4</li>
     </ul>
 </div>
 ```
