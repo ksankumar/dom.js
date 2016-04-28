@@ -1,13 +1,13 @@
 # DOM.JS
 
-Simple, faster and pure javascript library for DOM manipulation.
+Simple, faster and pure javascript library to DOM manipulation.
 
   - Event handling
   - DOM manipulation
   - Validations
   - ...more
 
-DOM-JS is a lightweight Javascript library for perform DOM manipulations
+DOM-JS is a lightweight Javascript library to perform DOM manipulations
 
 
 ### Version
